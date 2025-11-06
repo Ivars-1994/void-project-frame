@@ -1,0 +1,148 @@
+.pxl-nav-menu {
+	.pxl-menu-primary > li {
+		&.menu-item-has-children > a {
+			.flaticon-arrow-down-1 {
+				display: inline-flex;
+				font-size: 13px;
+				line-height: 1;
+				margin-left: 8px;
+				@include transition(all .25s cubic-bezier(.645,.045,.355,1));
+                position: relative;
+                top: 2px;
+                z-index: 1;
+                &:before {
+                    font-weight: bold;
+                }
+			}
+		}
+	}
+	.sub-menu li.menu-item-has-children > a:after {
+		position: absolute;
+		top: 50%;
+		right: -5px;
+		@include transform(translate(0, -50%));
+		font-size: 15px;
+		font-weight: 400;
+        content: "\eab8";
+        font-family: "IcoFont";
+	}
+}
+.pxl-nav-hidden {
+	.pxl-menu-toggle {
+		display: block;
+        position: absolute;
+        top: 12px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        right: 0px;
+        width: 28px;
+        cursor: pointer;
+        font-size: 10px;
+        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+        color: #fff;
+        background-color: #{'rgba(var(--primary-color-rgb),0.5)'};
+        &:before {
+        	content: "\f150";
+        	font-family: "Bravisicon";
+        }
+        &.active {
+			&:before{
+				content: "\f13d";
+	        }
+        }
+    }
+	.pxl-menu-hidden {
+		list-style: none;
+        margin: 0;
+        padding: 0;
+        max-width: 280px;
+        li {
+            position: relative;
+            a {
+                display: block;
+                line-height: 50px;
+                color: $third_color;
+                font-size: 20px;
+                font-weight: 700;
+                transition: all .5s ease;
+                &:hover {
+                    
+                }
+            }
+            > a:hover,
+            > a.current, 
+            &.current_page_item > a,
+            &.current-menu-item > a,
+            &.current_page_ancestor > a,
+            &.current-menu-ancestor > a {
+                color: $primary_color;
+            }
+        }
+        > li.menu-item-has-children {
+            > a {
+                position: relative;
+                display: block;
+            }
+        }
+        > li {
+            transition: all .5s ease;
+              transition-delay: 0s;
+            -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+            &:nth-child(1) {
+                -webkit-transition-delay: .13s, .13s, 0s;
+                transition-delay: .13s, .13s, 0s;
+            }
+            &:nth-child(2) {
+                -webkit-transition-delay: .26s, .26s, 0s;
+                transition-delay: .26s, .26s, 0s;
+            }
+            &:nth-child(3) {
+                -webkit-transition-delay: .39s, .39s, 0s;
+                transition-delay: .39s, .39s, 0s;
+            }
+            &:nth-child(4) {
+                -webkit-transition-delay: .52s, .52s, 0s;
+                transition-delay: .52s, .52s, 0s;
+            }
+            &:nth-child(5) {
+                -webkit-transition-delay: .65s, .65s, 0s;
+                transition-delay: .65s, .65s, 0s;
+            }
+            &:nth-child(6) {
+                -webkit-transition-delay: .78s, .78s, 0s;
+                transition-delay: .78s, .78s, 0s;
+            }
+        }
+        .sub-menu, .children {
+            position: relative;
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 15px;
+            li {
+           		a {
+                    position: relative;
+           			font-size: 16px;
+           			font-weight: 500;
+           			line-height: 36px;
+                    .pxl-menu-toggle {
+                        top: 5px;
+                    }
+           		}
+            }
+            &.pxl-mega-menu {
+                padding-left: 0;
+                .elementor-section {
+                    padding: 30px 0;
+                    max-width: 100%;
+                }
+            }
+        }
+        > li > .sub-menu > li > .sub-menu > li a {
+        	//padding-left: 28px;
+        }
+	}
+}

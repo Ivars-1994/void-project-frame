@@ -1,0 +1,53 @@
+#wpbody #elementor-editor {
+	height: 100px;
+}
+.postbox-container #slider_revolution_metabox {
+	display: none;
+}
+.postbox-container .redux-wrap-div .redux-container {
+	overflow: visible
+}
+.elementor-control-type-layoutcontrol .radio-image-item {
+	border: 2px solid rgba(26,161,241, 0.2);
+}
+.elementor-control-type-layoutcontrol .radio-image-item.selected,
+.elementor-control-type-layoutcontrol .radio-image-item:hover {
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.12);
+	border: 2px solid #67FB94;
+}
+#elementor-panel-get-pro-elements-sticky {
+    display: none;
+}
+.redux-container-multi_text a.redux-multi-text-remove.deletion:hover {
+	background-color: #002573!important;
+}
+#adminmenu .wp-menu-image img {
+	padding-top: 3px;
+	opacity: 1;
+}
+.wp-admin .fa:before {
+  font-family: : FontAwesome !important;
+}
+.elementor-panel img {
+	width: 100%;
+}
+.icons-selector .fip-box i:not(.fab) {
+ font-family: "Font Awesome 5 Pro";
+}
+#debug-menu-targets table th {
+	color: #000;
+}
+#debug-bar-request h3, #debug-bar-wp-query h3 {
+	color: #000;
+}
+.redux-container .redux-sidebar, .redux-container .redux-main {
+	min-height: 500px !important;
+}
+.elementor-editor-active #elementor-panel-content-wrapper .elementor-control-media__preview {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.redux-field-meta-hidden {
+	display: none;
+}

@@ -1,0 +1,186 @@
+.pxl-accordion {
+    .pxl-item--title {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .pxl-item--content {
+        display: none;
+    }
+}
+.pxl-accordion1 {
+    .pxl-item--title {
+        position: relative;
+        color: $color_heading;
+    }
+    &.style1 {
+        .pxl-item--title {
+            font-size: 15px;
+            padding: 28px 80px 28px 20px;
+            border: 1px solid #D2DBE8;
+            position: relative;
+            @include border-radius(4px);
+        }
+        i {
+            position: absolute;
+            top: 50%;
+            @include transition(all .3s ease);
+            @include transform( translate(0, -50%) );
+            width: 32px;
+            height: 32px;
+            @include border-radius(4px);
+            color: #fff;
+            right: 20px;
+            left: auto;
+            font-size: 16px;
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary_color;
+        }
+        .pxl-item--content {
+            color: $third_color;
+            line-height: 1.875;
+            padding: 22px 20px 0px;
+            font-size: 14px;
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .pxl--item {
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            &.active i {
+                background-color: $primary_color;
+                color: #fff;
+                @include transform( translate(0, -50%) );
+                &:before {
+                    content: "\ef9a";
+                }
+                .pxl-item--title {
+                    color: #046270;
+                }
+            }
+            + .pxl--item {
+                margin-top: 25px;
+            }
+        }
+    }
+    &.style2 {
+        .pxl-item--title {
+            font-size: 18px;
+            padding: 18px 80px 18px 20px;
+            border: 1px solid #D2DBE8;
+            @include border-radius(35px);
+            background-color: #fff;
+        }
+        i {
+            position: absolute;
+            top: 50%;
+            @include transition(all .3s ease);
+            @include transform( translate(0, -50%) );
+            width: 32px;
+            height: 32px;
+            @include border-radius(32px);
+            color: $primary_color;
+            right: 20px;
+            left: auto;
+            font-size: 16px;
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            background-color: #DDEEFF;
+        }
+        .pxl-item--content {
+            color: $third_color;
+            line-height: 1.875;
+            padding: 22px 20px 0px;
+            font-size: 16px;
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .pxl--item {
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            &.active i {
+                background-color: $primary_color;
+                color: #fff;
+                @include transform( translate(0, -50%) );
+                &:before {
+                    content: "\ef9a";
+                }
+                .pxl-item--title {
+                    color: #046270;
+                }
+            }
+            + .pxl--item {
+                margin-top: 25px;
+            }
+        }
+    }
+    &.style3 {
+        .pxl-item--title {
+            font-size: 18px;
+            padding: 22px 80px 22px 0px;
+            border-bottom: 1px solid rgba(#fff, 0.3);
+        }
+        i {
+            position: absolute;
+            top: 50%;
+            @include transition(all .3s ease);
+            @include transform( translate(0, -50%) );
+            width: 32px;
+            height: 32px;
+            color: inherit;
+            right: 0px;
+            left: auto;
+            font-size: 16px;
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+        }
+        .pxl-item--content {
+            color: $third_color;
+            line-height: 1.875;
+            padding: 18px 0px 0px;
+            font-size: 16px;
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .pxl--item {
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            &.active {
+                .pxl-item--title {
+                    color: $primary_color;
+                }
+                i {
+                    @include transform( translate(0, -50%) );
+                    color: $primary_color;
+                    &:before {
+                        content: "\ef9a";
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+<?php 
+$default_settings = [
+    'title' => '',
+    'image' => '',
+    'img_size' => '',
+    'image_link' => '',
+    'notification' => '',
+    'notification_label' => '',
+];
+$settings = array_merge($default_settings, $settings);
+extract($settings);
+$size = 'full';
+if(!empty($img_size)) {
+    $size = $img_size;
+} else {
+    $size = 'full';
+}
+$img  = pxl_get_image_by_size( array(
+    'attach_id'  => $image['id'],
+    'thumb_size' => $size,
+) );
+$thumbnail    = $img['thumbnail'];
+if ( ! empty( $image_link['url'] ) ) {
+    $widget->add_render_attribute( 'image_link', 'href', $image_link['url'] );
+
+    if ( $image_link['is_external'] ) {
+        $widget->add_render_attribute( 'image_link', 'target', '_blank' );
+    }
+
+    if ( $image_link['nofollow'] ) {
+        $widget->add_render_attribute( 'image_link', 'rel', 'nofollow' );
+    }
+}
+
+if ( ! empty( $settings['link']['url'] ) ) {
+    $widget->add_render_attribute( 'link', 'href', $settings['link']['url'] );
+    $icon_tag = 'a';
+
+    if ( $settings['link']['is_external'] ) {
+        $widget->add_render_attribute( 'link', 'target', '_blank' );
+    }
+
+    if ( $settings['link']['nofollow'] ) {
+        $widget->add_render_attribute( 'link', 'rel', 'nofollow' );
+    }
+}
+$link_attributes = $widget->get_render_attribute_string( 'link' );
+
+if ( ! empty( $settings['link2']['url'] ) ) {
+    $widget->add_render_attribute( 'link2', 'href', $settings['link2']['url'] );
+    $icon_tag = 'a';
+
+    if ( $settings['link2']['is_external'] ) {
+        $widget->add_render_attribute( 'link2', 'target', '_blank' );
+    }
+
+    if ( $settings['link2']['nofollow'] ) {
+        $widget->add_render_attribute( 'link2', 'rel', 'nofollow' );
+    }
+}
+$link_attributes2 = $widget->get_render_attribute_string( 'link2' );
+?>
+<div class="pxl-showcase pxl-showcase2 <?php echo esc_attr( $settings['item_display'].' '.$settings['pxl_animate'] ); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
+    <div class="inner-box">
+        <?php if ( ! empty( $image['url'] ) ) { ?>
+            <div class="item-feature">
+                <?php if ( $settings['item_display'] == 'item-normarl' ) { ?>
+                    <?php if ( ! empty( $settings['image_bg']['url'] ) ) { ?>
+                        <div class="bg-image" <?php if(!empty($settings['image_bg']['id'])) { ?>style="background-image: url(<?php echo esc_url($settings['image_bg']['url']); ?>);"<?php } ?>></div>
+                    <?php } ?>
+                <?php } ?>
+                <?php if ( ! empty( $image_link['url'] ) ) { ?><a class="link-fearture" <?php pxl_print_html($widget->get_render_attribute_string( 'image_link' )); ?>><?php } ?>
+                    <?php echo wp_kses_post($thumbnail);  ?>
+                <?php if ( ! empty( $image_link['url'] ) ) { ?></a><?php } ?>
+                <?php if ( $settings['item_display'] == 'item-normarl' ) { ?>
+                    <div class="pxl-item-links">
+                        <?php if( ! empty($settings['btn_text1']) || ! empty( $settings['link']['url'] ) ) { ?>
+                            <a class="link-1 btn-hover" <?php pxl_print_html($widget->get_render_attribute_string( 'link' )); ?>>
+                                <span><?php echo pxl_print_html($settings['btn_text1']); ?></span>
+                            </a>
+                        <?php } ?>
+                        <?php if( ! empty($settings['btn_text2']) || ! empty( $settings['link2']['url'] ) ) { ?>
+                            <a class="link-2 btn-hover active" <?php pxl_print_html($widget->get_render_attribute_string( 'link2' )); ?>>
+                                <span><?php echo pxl_print_html($settings['btn_text2']); ?></span>
+                            </a>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php } ?>
+        <div class="pxl-meta">
+            <?php if ( $settings['item_display'] == 'item-normarl' ) { ?>
+                <div class="pxl-titles">
+                    <?php if( ! empty($title) ) { ?>
+                        <h3 class="item-title">
+                            <?php if ( ! empty( $image_link['url'] ) ) { ?><a <?php pxl_print_html($widget->get_render_attribute_string( 'image_link' )); ?>><?php } ?>
+                                <?php echo pxl_print_html($title); ?>
+                            <?php if ( ! empty( $image_link['url'] ) ) { ?></a><?php } ?>
+                            <?php if ( $settings['notification'] == 'true' ) { ?>
+                                <?php if( ! empty($settings['notification_label']) ) { ?>
+                                    <span class="notification"><?php echo pxl_print_html($settings['notification_label']); ?></span>
+                                <?php } ?>
+                            <?php } ?>
+                        </h3>
+                    <?php } ?>
+                    <?php if( ! empty($settings['sub_label']) ) { ?>
+                        <div class="pxl-sub-title">
+                            <?php echo pxl_print_html($settings['sub_label']); ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+            <?php if ( $settings['item_display'] == 'item-comingsoon' ) { ?>
+                <div class="pxl-titles">
+                    <?php if( ! empty($title) ) { ?>
+                        <h3 class="item-title">
+                                <?php echo pxl_print_html($title); ?>
+                        </h3>
+                    <?php } ?>
+                    <?php if( ! empty($settings['title']) ) { ?>
+                        <div class="pxl-sub-title">
+                            <?php echo pxl_print_html($settings['title']); ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>

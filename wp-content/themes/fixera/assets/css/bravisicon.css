@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "Bravisicon";
+  src: url("../fonts/bravisicon/bravisicon.eot");
+  src: url("../fonts/bravisicon/bravisicon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/bravisicon/bravisicon.woff2") format("woff2"),
+       url("../fonts/bravisicon/bravisicon.woff") format("woff"),
+       url("../fonts/bravisicon/bravisicon.ttf") format("truetype"),
+       url("../fonts/bravisicon/bravisicon.svg#bravisicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Bravisicon";
+    src: url("../fonts/bravisicon/bravisicon.svg#Bravisicon") format("svg");
+  }
+}
+
+[class^="bravisicon-"], [class*=" bravisicon-"] {
+  display: inline-block;
+}
+
+[class^="bravisicon-"]:before, [class*=" bravisicon-"]:before,
+[class^="bravisicon-"]:after, [class*=" bravisicon-"]:after {   
+  font-family: Bravisicon;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.bravisicon-view-alt:before {
+    content: "\f101";
+}
+.bravisicon-random:before {
+    content: "\f102";
+}
+.bravisicon-grid:before {
+    content: "\f103";
+}
+.bravisicon-location:before {
+    content: "\f104";
+}
+.bravisicon-close-alt:before {
+    content: "\f105";
+}
+.bravisicon-user-alt:before {
+    content: "\f106";
+}
+.bravisicon-pin2:before {
+    content: "\f107";
+}
+.bravisicon-calendar:before {
+    content: "\f108";
+}
+.bravisicon-behance:before {
+    content: "\f109";
+}
+.bravisicon-tripadvisor:before {
+    content: "\f10a";
+}
+.bravisicon-play1:before {
+    content: "\f10b";
+}
+.bravisicon-yelp:before {
+    content: "\f10c";
+}
+.bravisicon-close-solid:before {
+    content: "\f10d";
+}
+.bravisicon-link4:before {
+    content: "\f10e";
+}
+.bravisicon-long-arrow-right-two:before {
+    content: "\f10f";
+}
+.bravisicon-pin:before {
+    content: "\f110";
+}
+.bravisicon-play4:before {
+    content: "\f111";
+}
+.bravisicon-tick:before {
+    content: "\f112";
+}
+.bravisicon-link2:before {
+    content: "\f113";
+}
+.bravisicon-tags-alt:before {
+    content: "\f114";
+}
+.bravisicon-list:before {
+    content: "\f115";
+}
+.bravisicon-link3:before {
+    content: "\f116";
+}
+.bravisicon-tumblr:before {
+    content: "\f117";
+}
+.bravisicon-placeholder:before {
+    content: "\f118";
+}
+.bravisicon-check-mark:before {
+    content: "\f119";
+}
+.bravisicon-clock:before {
+    content: "\f11a";
+}
+.bravisicon-time:before {
+    content: "\f11b";
+}
+.bravisicon-play2:before {
+    content: "\f11c";
+}
+.bravisicon-link:before {
+    content: "\f11d";
+}
+.bravisicon-check:before {
+    content: "\f11e";
+}
+.bravisicon-comment-solid:before {
+    content: "\f11f";
+}
+.bravisicon-calendar-1:before {
+    content: "\f120";
+}
+.bravisicon-vimeo:before {
+    content: "\f121";
+}
+.bravisicon-people-location:before {
+    content: "\f122";
+}
+.bravisicon-pinterest:before {
+    content: "\f123";
+}
+.bravisicon-facebook:before {
+    content: "\f124";
+}
+.bravisicon-map:before {
+    content: "\f125";
+}
+.bravisicon-close:before {
+    content: "\f126";
+}
+.bravisicon-close3:before {
+    content: "\f127";
+}
+.bravisicon-close-outline:before {
+    content: "\f128";
+}
+.bravisicon-instagram:before {
+    content: "\f129";
+}
+.bravisicon-folder:before {
+    content: "\f12a";
+}
+.bravisicon-clock-1:before {
+    content: "\f12b";
+}
+.bravisicon-search:before {
+    content: "\f12c";
+}
+.bravisicon-refresh:before {
+    content: "\f12d";
+}
+.bravisicon-long-arrow-right:before {
+    content: "\f12e";
+}
+.bravisicon-heart-alt:before {
+    content: "\f12f";
+}
+.bravisicon-quote-bottom:before {
+    content: "\f130";
+}
+.bravisicon-double-chevron-down:before {
+    content: "\f131";
+}
+.bravisicon-comment:before {
+    content: "\f132";
+}
+.bravisicon-android:before {
+    content: "\f133";
+}
+.bravisicon-double-chevron-right:before {
+    content: "\f134";
+}
+.bravisicon-linkedin:before {
+    content: "\f135";
+}
+.bravisicon-angle-arrow-left:before {
+    content: "\f136";
+}
+.bravisicon-right-arrow:before {
+    content: "\f137";
+}
+.bravisicon-open-folder:before {
+    content: "\f138";
+}
+.bravisicon-zoom-in:before {
+    content: "\f139";
+}
+.bravisicon-double-chevron-left:before {
+    content: "\f13a";
+}
+.bravisicon-envelope:before {
+    content: "\f13b";
+}
+.bravisicon-caret-arrow-down:before {
+    content: "\f13c";
+}
+.bravisicon-angle-arrow-up:before {
+    content: "\f13d";
+}
+.bravisicon-double-chevron-up:before {
+    content: "\f13e";
+}
+.bravisicon-left-arrow:before {
+    content: "\f13f";
+}
+.bravisicon-youtube:before {
+    content: "\f140";
+}
+.bravisicon-tags:before {
+    content: "\f141";
+}
+.bravisicon-long-arrow-right-three:before {
+    content: "\f142";
+}
+.bravisicon-calendar-2:before {
+    content: "\f143";
+}
+.bravisicon-calendar-alt:before {
+    content: "\f144";
+}
+.bravisicon-shopping-cart-alt:before {
+    content: "\f145";
+}
+.bravisicon-arrows-updown:before {
+    content: "\f146";
+}
+.bravisicon-home:before {
+    content: "\f147";
+}
+.bravisicon-caret-arrow-up:before {
+    content: "\f148";
+}
+.bravisicon-quote-left:before {
+    content: "\f149";
+}
+.bravisicon-skype:before {
+    content: "\f14a";
+}
+.bravisicon-twitter:before {
+    content: "\f14b";
+}
+.bravisicon-play3:before {
+    content: "\f14c";
+}
+.bravisicon-arrow-forward-ne1:before {
+    content: "\f14d";
+}
+.bravisicon-user:before {
+    content: "\f14e";
+}
+.bravisicon-dribbble:before {
+    content: "\f14f";
+}
+.bravisicon-angle-arrow-down:before {
+    content: "\f150";
+}
+.bravisicon-shopping-cart:before {
+    content: "\f151";
+}
+.bravisicon-long-arrow-left:before {
+    content: "\f152";
+}
+.bravisicon-marker:before {
+    content: "\f153";
+}
+.bravisicon-refresh-arrow:before {
+    content: "\f154";
+}
+.bravisicon-phone:before {
+    content: "\f155";
+}

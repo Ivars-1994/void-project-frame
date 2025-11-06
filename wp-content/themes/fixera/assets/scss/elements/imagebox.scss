@@ -1,0 +1,124 @@
+@-ms-keyframes pxl_spin_reverse {
+    from { -ms-transform: translate(-50%, -50%) rotate(0deg); }
+    to { -ms-transform: translate(-50%, -50%) rotate(-360deg); }
+}
+@-moz-keyframes pxl_spin_reverse {
+    from { -moz-transform: translate(-50%, -50%) rotate(0deg); }
+    to { -moz-transform: translate(-50%, -50%) rotate(-360deg); }
+}
+@-webkit-keyframes pxl_spin_reverse {
+    from { -webkit-transform: translate(-50%, -50%) rotate(0deg); }
+    to { -webkit-transform: translate(-50%, -50%) rotate(-360deg); }
+}
+@keyframes pxl_spin_reverse {
+    from {
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform:translate(-50%, -50%) rotate(-360deg);
+    }
+}
+.pxl-circle {
+    .pxl-item--icon {
+        text-align: center;
+        position: absolute;
+        z-index: 22;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        a {
+            display: block;
+        }
+        img {
+            width: auto;
+            max-height: 54px;
+        }
+        .logo-dark {
+            @include transition(all 300ms linear 0ms);
+        }
+        .logo-light {
+            @extend .pxl-middle;
+            @include transform(translate3d(-50%,-50%,0) scale3d(0,0,1));
+        }
+    }
+    .pxl-item--title {
+        font-size: 16px;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        @include border-radius(100%);
+        animation: pxl_spin 16s infinite linear;
+        -webkit-animation: pxl_spin 16s infinite linear;
+        &:before {
+            @include border-radius(100%);
+            content: "";
+            display: block;
+            width: 65%;
+            height: 65%;
+            border: 1px solid rgba(#fff, 0);
+            @include transform(translate(-50%, -50%));
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        svg {
+            fill: transparent;
+            position: absolute;
+            width: 127px;
+            height: 127px;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            overflow: visible;
+            text {
+                fill: #000;
+            }
+        }
+    }
+    .pxl-circle-inner {
+        width: 168px;
+        height: 168px;
+        @include border-radius(100%);
+        position: relative;
+        z-index: 1;
+        &:before, &:after {
+            @include border-radius(100%);
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+        }
+        &:before {
+            width: 110%;
+            height: 110%;
+            top: -5%;
+            left: -5%;
+            bottom: -5%;
+            right: -5%;
+            border: 1px solid $primary_color;
+        }
+        &:after {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 32px solid $primary_color;
+        }
+    }
+    &:hover {
+        .pxl-item--icon {
+            .logo-dark {
+                opacity: 0;
+                transform: translate3d(-50%,-50%,0) scale3d(5,5,5);
+            }
+            .logo-light {
+                transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+                transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+            }
+        }
+    }
+}

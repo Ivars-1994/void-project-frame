@@ -1,0 +1,158 @@
+.pxl-pie-chart1 {
+	position: relative;
+	display: inline-flex;
+	overflow: hidden;
+	.pxl-item--title {
+		font-size: 18px;
+		white-space: nowrap;
+		span {
+			display: inline-block;
+			@extend .text-gradient;
+		}
+	}
+	.pxl-percentage {
+		display: inline-flex;
+		canvas {
+			@include transform(scaleX(-1));
+		}
+	}
+	.pxl--counter-number {
+		color: #000;
+		font-size: 30px;
+		line-height: 1;
+		white-space: nowrap;
+		display: inline-flex;
+		@extend .ft-theme-default;
+		@media #{$max-lg} {
+			font-size: 26px;
+		}
+	}
+	.pxl-item--holder {
+		@extend .pxl-middle;
+		text-align: center;
+	}
+	&.style2 {
+		.pxl-item--title {
+			font-size: 14px;
+			color: #000000;
+			margin-top: -2px;
+			span {
+				@extend .rm-text-gradient;
+			}
+		}
+		.pxl--counter-number {
+			font-size: 34px;
+			color: #000000;
+			@extend .ft-theme-default;
+			font-weight: 700;
+		}
+	}
+}
+
+.pxl-pie-chart2 {
+	text-align: center;
+	.pxl-item--title {
+		font-size: 18px;
+		color: #6c6c97;
+	}
+	.pxl--counter-number {
+		display: inline-flex;
+		font-size: 30px;
+		color: #100030;
+		font-weight: 700;
+		@extend .ft-theme-default;
+		@extend .pxl-middle;
+	}
+	.pxl-item--value {
+		display: inline-flex;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 10px;
+	}
+	.pxl-item--divider {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border: 5px solid #d7daff;
+		border-radius: 100%;
+		z-index: -1;
+	}
+}
+
+.pxl-pie-chart3 {
+	position: relative;
+	.pxl-item--title {
+		font-size: 18px;
+		white-space: nowrap;
+		span {
+			display: inline-block;
+			@extend .text-gradient;
+		}
+	}
+	.pxl-percentage {
+		display: inline-flex;
+		canvas {
+			@include transform(scaleX(-1));
+		}
+	}
+	.pxl--counter-number {
+		color: #000;
+		font-size: 26px;
+		line-height: 1;
+		white-space: nowrap;
+		display: inline-flex;
+		@extend .ft-theme-default;
+		@media #{$min-lg} {
+			font-size: 42px;
+		}
+	}
+	.pxl-item--holder {
+		@extend .pxl-middle;
+		text-align: center;
+	}
+	&.style2 {
+		.pxl-item--title {
+			font-size: 14px;
+			color: #000000;
+			margin-top: -2px;
+			span {
+				@extend .rm-text-gradient;
+			}
+		}
+		.pxl--counter-number {
+			font-size: 34px;
+			color: #000000;
+			@extend .ft-theme-default;
+			font-weight: 700;
+		}
+	}
+}
+
+.wp-pie-chat {
+	display: flex;
+	align-items: center;
+	@media #{ $max-lg } {
+		flex-wrap: wrap;
+	}
+	.pxl-pie-chart3 {
+		margin-right: 20px;	
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.pxl-item--title {
+		color: $secondary_color;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 28px;
+		margin-bottom: 12px;
+	}
+	.pxl-item--desc {
+		font-size: 14px;
+		font-weight: 400;
+	} 
+	.px-meta {
+		padding-bottom: 10px;
+	}
+}

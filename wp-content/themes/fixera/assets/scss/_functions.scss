@@ -1,0 +1,110 @@
+/* Clumn Elmentor Custom */
+.elementor-column.pxl-column-element-grow {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; 
+}
+
+.elementor-column.pxl-column-element-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%; 
+}
+@media (max-width: 1599px) {
+  .elementor-column.pxl-column-element-laptop-full {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100%; 
+  }
+  .elementor-column.pxl-column-element-laptop-grow {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; 
+  }
+  .elementor-column.pxl-column-element-laptop-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%; 
+  } 
+}
+@media (max-width: 1199px) {
+  .elementor-column.pxl-column-element-tablet_extra-full {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-tablet_extra-grow {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-tablet_extra-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%; 
+  } 
+}
+@media (max-width: 991px) {
+  .elementor-column.pxl-column-element-tablet-full {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-tablet-grow {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-tablet-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%; } 
+}
+@media (max-width: 767px) {
+  .elementor-column.pxl-column-element-mobile_extra-full {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-mobile_extra-grow {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-mobile_extra-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%; } 
+}
+@media (max-width: 575px) {
+  .elementor-column.pxl-column-element-mobile-full {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100% !important;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-mobile-grow {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%; }
+  .elementor-column.pxl-column-element-mobile-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%; } 
+}
+/* Clumn Elmentor Custom */
