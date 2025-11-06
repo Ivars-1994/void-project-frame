@@ -1,4 +1,4 @@
-@'
+
 /wp-content/uploads/
 /wp-content/cache/
 /wp-content/upgrade/
@@ -14,4 +14,3 @@
 *.rar
 *.7z
 *.log
-'@ | Out-File -Encoding utf8 .gitignore
