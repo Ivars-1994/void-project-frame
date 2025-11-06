@@ -1,0 +1,17 @@
+@'
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/ai1wm-backups/
+/wp-content/updraft/
+/wp-content/backups/
+/node_modules/
+/vendor/
+/*.sql
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.log
+'@ | Out-File -Encoding utf8 .gitignore
